@@ -60,8 +60,8 @@ handleEmailSending = (req, res) => {
 
     // Send email using mailSenderService
     sendMail(data)
-        .then((resp) => res.status(200).json({success:false,message:"mail send successfully",acceptedMail:resp.accepted}))
-        .catch((err) => console.error(err.message));
+        .then((resp) => res.status(200).json({success:true,message:"mail send successfully",acceptedMail:resp.accepted}))
+        .catch((err) => res.status(500).json({success:false,message:"mail not send successfully",error:err.message}))
 }
 
 module.exports = {
