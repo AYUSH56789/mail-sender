@@ -3,7 +3,7 @@ const fs = require('fs');
 
 // Function to write log data to a custom JSON file
 function writeToCustomLogFile(data) {
-    const logFilePath = 'custom-email-log.json';
+    const logFilePath = 'email-log.json';
 
     // Initialize log data as an empty array
     let logData = [];
@@ -25,7 +25,7 @@ function writeToCustomLogFile(data) {
         // Append new data to the log array
         logData.push({
             senderMail: data.senderMail,
-            receiverMails: data.receiverMails,
+            receiverMails: data.mailTemplate.to,
             subject: data.mailTemplate.subject,
             timestamp: new Date().toISOString() // Add a timestamp for reference
         });
@@ -52,6 +52,9 @@ handleEmailSending = (req, res) => {
             "timeout": 30000
         }
     };
+
+    // Add cc recipients to the mailTemplate object
+    data.mailTemplate.to = data.receiverMails;
     
     console.log(data);
 
