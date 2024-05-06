@@ -15,6 +15,7 @@ To use the Main Sender API in your project, follow these steps:
 1. Send a POST request to the API endpoint with the required data in the request body.
 
 ### API Endpoint
+https://mail-sender-teo8.onrender.com/mail/send-mail
 
 ### Request Body Attributes
 - `senderMail`: The email address of the sender.
@@ -30,19 +31,19 @@ To use the Main Sender API in your project, follow these steps:
 
 ### Sample Request Body
 ```json
-{
-  "senderMail": "www.infychat01@gmail.com",
-  "senderMailPassword": "rnpgdjwuvrdvdunf",
+data:{
+  "senderMail": "your-email@gmail.com",
+  "senderMailPassword": "your-gmail-password",
   "receiverMails": [
-    "ayushsingh46026@gmail.com",
-    "ksaluja03@gmail.com"
+   "receiver-email-1@example.com",
+    "receiver-email-2@example.com"
   ],
   "mailTemplate": {
     "from": {
-      "name": "InfyChat Team",
-      "address": "support@infychat.com" 
+      "name": "Your Organization Name",
+      "address": "your-email@example.com" 
     },
-    "subject": "Welcome to the InfyChat Community!",
-    "html": "<h1>This is a heading</h1><p>This is some paragraph text.</p>"
+    "subject": "Welcome to Our Community!",
+    "html": "<h1>Welcome to Our Community!</h1><p>Thank you for joining us. We are excited to have you on board.</p>"
   }
 }
