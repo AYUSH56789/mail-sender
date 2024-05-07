@@ -14,7 +14,7 @@ To use the Main Sender API in your project, follow these steps:
 
 1. Send a POST request to the API endpoint with the required data in the request body.
 
-### API Endpoint
+## API Endpoint
 https://mail-sender-teo8.onrender.com/mail/send-mail
 
 ### Request Body Attributes
