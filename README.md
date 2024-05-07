@@ -29,42 +29,6 @@ https://mail-sender-teo8.onrender.com/mail/send-mail
     - `filename`: The filename of the attachment.
     - `content`: The content of the attachment file in base64 encoding.
 
-### Sample Request Body
-```json
-{
-  "senderMail": "your-email@gmail.com",
-  "senderMailPassword": "your-gmail-password",
-  "receiverMails": [
-    "receiver-email-1@example.com",
-    "receiver-email-2@example.com"
-  ],
-  "mailTemplate": {
-    "from": {
-      "name": "Your Organization Name",
-      "address": "your-email@example.com" 
-    },
-    "subject": "Welcome to Our Community!",
-    "html": "<h1>Welcome to Our Community!</h1><p>Thank you for joining us. We are excited to have you on board.</p>"
-  }
-}
-
-const formdata = {
-  "senderMail": "your-email@gmail.com",
-  "senderMailPassword": "your-gmail-password",
-  "receiverMails": [
-    "receiver-email-1@example.com",
-    "receiver-email-2@example.com"
-  ],
-  "mailTemplate": {
-    "from": {
-      "name": "Your Organization Name",
-      "address": "your-email@example.com" 
-    },
-    "subject": "Welcome to Our Community!",
-    "html": "<h1>Welcome to Our Community!</h1><p>Thank you for joining us. We are excited to have you on board.</p>"
-  }
-};
-
 const res = await fetch("https://mail-sender-teo8.onrender.com/mail/send-mail", {
   method: 'POST',
   credentials: 'include',
