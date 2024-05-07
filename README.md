@@ -1,6 +1,6 @@
 # Main Sender API
 
-## Introduction
+### Introduction
 The Main Sender API is designed to simplify the process of sending emails by integrating it into your project. It is a Node.js-based project that utilizes Node Mailer for email sending functionality.
 
 ##
@@ -11,16 +11,21 @@ The Main Sender API is designed to simplify the process of sending emails by int
 - Support for sending emails to multiple recipients.
 - Option to include attachments in emails.
 
-## How to Use
+##
+
+### How to Use
 To use the Main Sender API in your project, follow these steps:
 
 1. Send a POST request to the API endpoint with the required data in the request body.
 
+##
 
-## API Endpoint
+### API Endpoint
 https://mail-sender-teo8.onrender.com/mail/send-mail
 
-## Request Body Attributes
+##
+
+### Request Body Attributes
 - `senderMail`: The email address of the sender.
 - `senderMailPassword`: The password for the sender's email account.
 - `receiverMails`: An array of email addresses of the recipients.
@@ -32,7 +37,9 @@ https://mail-sender-teo8.onrender.com/mail/send-mail
     - `filename`: The filename of the attachment.
     - `content`: The content of the attachment file in base64 encoding.
 
-### Sample Request Body
+##
+
+### Sample Code
 ```json
 formdata : {
   "senderMail": "your-email@gmail.com",
@@ -56,3 +63,6 @@ const res = await fetch("https://mail-sender-teo8.onrender.com/mail/send-mail", 
   credentials: 'include',
   body: JSON.stringify(formdata)
 });
+```
+
+##
