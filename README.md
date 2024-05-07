@@ -3,6 +3,8 @@
 ## Introduction
 The Main Sender API is designed to simplify the process of sending emails by integrating it into your project. It is a Node.js-based project that utilizes Node Mailer for email sending functionality.
 
+##
+
 ### Features
 - Easily integrate email sending functionality into your project.
 - Customizable email templates.
